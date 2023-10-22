@@ -9,11 +9,11 @@ const char * password = "TechSpace";
 
 
 String FirmwareVer = {
-  "2.4"
+  "2.5"
 };
 #define URL_fw_Version "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/bin_version.txt"
-#define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin"
-
+// #define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin"
+#define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/Github_OTA_esp32.ino.bin"
 //#define URL_fw_Version "http://cade-make.000webhostapp.com/version.txt"
 //#define URL_fw_Bin "http://cade-make.000webhostapp.com/firmware.bin"
 
