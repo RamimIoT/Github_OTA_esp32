@@ -9,7 +9,7 @@ const char* password = "TechSpace";
 
 
 String FirmwareVer = {
-  "2.9"
+  "2.10"
 };
 #define URL_fw_Version "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/bin_version.h"
 #define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin"
