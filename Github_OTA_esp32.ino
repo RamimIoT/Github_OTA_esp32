@@ -9,7 +9,7 @@ const char * password = "TechSpace";
 
 
 String FirmwareVer = {
-  "2.2"
+  "2.4"
 };
 #define URL_fw_Version "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/bin_version.txt"
 #define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin"
@@ -39,7 +39,7 @@ void repeatedCall() {
     previousMillis_2 = currentMillis;
     Serial.print("idle loop...");
     Serial.print(num++);
-    Serial.print(" Active fw version by Ramim 2.2:");
+    Serial.print(" Active fw version by Ramim:");
     Serial.println(FirmwareVer);
    if(WiFi.status() == WL_CONNECTED) 
    {
@@ -155,6 +155,8 @@ int FirmwareVersionCheck(void) {
       if (httpCode == HTTP_CODE_OK) // if version received
       {
         payload = https.getString(); // save received version
+        Serial.println("payload -----------------------------------------------------------------------------");
+        Serial.println(payload);
       } else {
         Serial.print("error in downloading version file:");
         Serial.println(httpCode);
