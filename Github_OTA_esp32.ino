@@ -9,9 +9,9 @@ const char* password = "TechSpace";
 
 
 String FirmwareVer = {
-  "2.6"
+  "2.7"
 };
-#define URL_fw_Version "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/bin_version.txt"
+#define URL_fw_Version "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/bin_version.h"
 #define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin"
 // #define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/Github_OTA_esp32.ino.bin"
 //#define URL_fw_Version "http://cade-make.000webhostapp.com/version.txt"
@@ -144,9 +144,13 @@ int FirmwareVersionCheck(void) {
     if (https.begin(*client, fwurl)) {  // HTTPS
       Serial.print("[HTTPS] GET...\n");
       // start connection and send HTTP header
+      Serial.println("old httpCode -----------------------------------------------------------------------------");
+      Serial.println(httpCode);
       delay(100);
       httpCode = https.GET();
       delay(100);
+      Serial.println("new httpCode -----------------------------------------------------------------------------");
+      Serial.println(httpCode);
       if (httpCode == HTTP_CODE_OK)  // if version received
       {
         payload = https.getString();  // save received version
