@@ -3,16 +3,16 @@
 #include <HTTPUpdate.h>
 #include <WiFiClientSecure.h>
 #include "cert.h"
-
-const char * ssid = "home_wifi";
-const char * password = "helloworld";
+#define LED_BUILTIN 2
+const char * ssid = "SoftKey_TechSpace_IoT";
+const char * password = "TechSpace";
 
 
 String FirmwareVer = {
   "2.2"
 };
-#define URL_fw_Version "https://raw.githubusercontent.com/programmer131/ESP8266_ESP32_SelfUpdate/master/esp32_ota/bin_version.txt"
-#define URL_fw_Bin "https://raw.githubusercontent.com/programmer131/ESP8266_ESP32_SelfUpdate/master/esp32_ota/fw.bin"
+#define URL_fw_Version "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/bin_version.txt"
+#define URL_fw_Bin "https://raw.githubusercontent.com/RamimIoT/Github_OTA_esp32/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin"
 
 //#define URL_fw_Version "http://cade-make.000webhostapp.com/version.txt"
 //#define URL_fw_Bin "http://cade-make.000webhostapp.com/firmware.bin"
@@ -23,7 +23,7 @@ int FirmwareVersionCheck();
 
 unsigned long previousMillis = 0; // will store last time LED was updated
 unsigned long previousMillis_2 = 0;
-const long interval = 60000;
+const long interval = 30000;
 const long mini_interval = 1000;
 void repeatedCall() {
   static int num=0;
@@ -39,7 +39,7 @@ void repeatedCall() {
     previousMillis_2 = currentMillis;
     Serial.print("idle loop...");
     Serial.print(num++);
-    Serial.print(" Active fw version:");
+    Serial.print(" Active fw version by Ramim 2.2:");
     Serial.println(FirmwareVer);
    if(WiFi.status() == WL_CONNECTED) 
    {
