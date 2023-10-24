@@ -8,8 +8,8 @@
 const String githubUser = "RamimIoT";
 const String githubRepo = "Github_OTA_esp32";
 const String githubBranches = "main";
-const String githubBin_version = "bin_version.h";
-const String githubBin_file = "build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin";
+const String githubBin_version = "examples/Github_OTA_esp32_Public_Repo/bin_version.h";
+const String githubBin_file = "examples/Github_OTA_esp32_Public_Repo/build/esp32.esp32.esp32/Github_OTA_esp32_Public_Repo.ino.bin";
 // We don't need 'githubToken' for Public Repo.
 // const char* githubToken = " ";
 const String binVersionURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_version;
