@@ -3,7 +3,7 @@
 #include <WiFiClientSecure.h>
 #include "cert.h"
 // binVersionURL = "https://github.com/RamimIoT/Github_OTA_esp32/blob/main/bin_version.h";
-// firmwareURL = "https://github.com/RamimIoT/Github_OTA_esp32/blob/main/build/esp32.esp32.esp32/Github_OTA_esp32.ino.bin";
+// firmwareURL = "https://github.com/RamimIoT/Github_OTA_esp32/blob/main/build/esp32.esp32.esp32/Github_OTA_esp32_Public_Repo.ino.bin";
 // Create a URL to fetch the asset from your release
 const String githubUser = "RamimIoT";
 const String githubRepo = "Github_OTA_esp32";
@@ -15,10 +15,10 @@ const String githubBin_file = "examples/Github_OTA_esp32_Public_Repo/build/esp32
 const String binVersionURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_version;
 const String firmwareURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_file;
 
-String FirmwareVer = "1.1";
+String FirmwareVer = "1.0";
 #define LED_BUILTIN 2
 
-unsigned long previousOTAMillis = 30000 + 1000;
+unsigned long previousOTAMillis = 30000 + 1000; // so it will check for update at startup
 unsigned long OTAinterval = 30 * 1000;  //30s
 
 

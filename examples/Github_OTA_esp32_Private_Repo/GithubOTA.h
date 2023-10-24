@@ -10,14 +10,14 @@ const String githubRepo = "Github_OTA_esp32_pri";
 const String githubBranches = "main";
 const String githubBin_version = "Github_OTA_esp32_p/bin_version.h";
 const String githubBin_file = "Github_OTA_esp32_p/build/esp32.esp32.esp32/Github_OTA_esp32_p.ino.bin";
-const char* githubToken = "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";
+const char* githubToken = "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"; // Fine-grained personal access token
 const String binVersionURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_version;
 const String firmwareURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_file;
 
 String FirmwareVer = "1.0";
 #define LED_BUILTIN 2
 
-unsigned long previousOTAMillis = 30000 + 1000;  
+unsigned long previousOTAMillis = 30000 + 1000;  // so it will check for update at startup
 unsigned long OTAinterval = 30 * 1000; //30s
 
 
