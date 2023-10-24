@@ -1,5 +1,4 @@
 
-```markdown
 # GitHub OTA for ESP32
 
 GitHub OTA for ESP32 is an Arduino library that facilitates Over-The-Air (OTA) updates for ESP32 devices from both Public and Private GitHub repositories. This library leverages the 'httpUpdate' library and supports fine-grained personal access tokens for secure access to private repositories.
