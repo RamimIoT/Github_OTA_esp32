@@ -15,7 +15,7 @@ const String githubBin_file = "examples/Github_OTA_esp32_Public_Repo/build/esp32
 const String binVersionURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_version;
 const String firmwareURL = "https://raw.githubusercontent.com/" + githubUser + "/" + githubRepo + "/" + githubBranches + "/" + githubBin_file;
 
-String FirmwareVer = "1.0";
+String FirmwareVer = "1.1";
 #define LED_BUILTIN 2
 
 unsigned long previousOTAMillis = 30000 + 1000;
