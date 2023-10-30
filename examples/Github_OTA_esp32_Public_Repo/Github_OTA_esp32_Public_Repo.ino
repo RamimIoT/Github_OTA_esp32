@@ -39,7 +39,7 @@ void loop() {
   if ((currentMillis - previousMillis_2) >= mini_interval) {  
     Serial.print("idle loop...");
     Serial.print(num++);
-    Serial.print(" Active fw version by Ramim : ");
+    Serial.print(" Working : ");
     Serial.println(FirmwareVer);
     if (WiFi.status() == WL_CONNECTED) {
       Serial.println("wifi connected");
